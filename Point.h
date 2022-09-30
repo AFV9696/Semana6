@@ -1,10 +1,12 @@
 #ifndef __POINT_H__
 #define __POINT_H__
 
-class Point {
+#include <iostream>
+
+class Point{
 
     public:
-        Point(int _x, int _y) : x(_x), y(_y) {}
+        Point(int _x = 0, int _y = 0) : x(_x), y(_y) {}
 
         void setX(int _x){
             x = _x;
@@ -20,6 +22,10 @@ class Point {
         
         int getY() const {
             return y;
+        }
+
+        void printArr() const {
+            std::cout << "(" << x << ", " << y << ")" << std::endl;
         }
 
     private:
